@@ -9,9 +9,7 @@ diff = 0
 while continuar:
     b = datetime.today()
     if b >= a:
-        msg="Ready, I count 20 minutes."
-        command="%s %s" % ("spd-say",msg)
-        system(command)
+        continuar = False
     else: 
         #system("clear")
         diff = a - b
@@ -23,9 +21,8 @@ while continuar:
             system("clear")
             print  " Counting ...     %s" % msg[0:-7]
             #print "%s" % (minutes)
-    
-
-    
 
 
-
+msg="Ready, I count 20 minutes."
+command="%s %s" % ("spd-say",msg)
+system(command)
